@@ -1,2 +1,1 @@
-# pw-generator
-A repository for a javascript password generator
+# Password Generator Starter Code
