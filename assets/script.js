@@ -4,9 +4,10 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 // begins when user clicks #generate button due to event listener
 function writePassword() {
+  // Output of the generatePassword function gets stored in the password variable
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  // Push the password variable to the #password field of the screen
   passwordText.value = password;
 }
 
@@ -32,11 +33,13 @@ function generatePassword() {
     // end function
     return;
   }
+  // Follow up prompts for character types to use
   var useLowercase = confirm("Do you want to include lowercase letters?");
   var useUppercase = confirm("Do you want to include uppercase letters?");
   var useNumbers = confirm("Do you want to include numbers?");
   var useSpecial = confirm("Do you want to include special characters?");
 
+  // if user selects character types, concatenate them to an array
   if (useLowercase === true) {
     userSelected += lowercase;
   }
@@ -49,14 +52,17 @@ function generatePassword() {
   if (useSpecial === true) {
     userSelected += special;
   }
+  // if no characters selected, display alert
   if (!useLowercase && !useUppercase && !useNumbers && !useSpecial) {
     alert("Please select at least one character type.");
   }
+  // for loop to pick a random value from userSelected, store in newPassword, repeat up to user desired length
   for (var i = 0; i < passwordLength; i++) {
     var randomNumber = Math.floor(Math.random() * userSelected.length);
     var randomCharacter = userSelected[randomNumber];
     newPassword += randomCharacter;
   }
+  // generatePassword function will output newPassword
   return newPassword;
 }
 
