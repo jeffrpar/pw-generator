@@ -10,7 +10,7 @@ Learning JavaScript has certainly been more of a challenge, as I had to learn to
 
 This password generator can be used to create a unique password by creating a string of random characters based on the user's selected criteria. Clicking the "Generate Password" button will prompt the user for criteria, and generate their unique password.
 
-![Password Generator Screenshot](./assets/screenshot-pwgen.png)
+![Password Generator Screenshot](./assets/screenshot-pwgen.PNG)
 
 ## Credits
 
